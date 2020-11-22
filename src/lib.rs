@@ -3,12 +3,13 @@ pub fn say_hello() {
 }
 
 pub fn print() {
-    let numbers = vec![1,2,3,4,5];
-    output_sequence(numbers);
-    output_sequence(numbers);
+    let array_numbers: [u8; 5] = [1, 2, 3, 4, 5];
+    output_sequence(&array_numbers);
+    let vector_numbers: Vec<u8> = vec![1, 2, 3, 4, 5];
+    output_sequence(&vector_numbers);
 }
 
-fn output_sequence(numbers: Vec<u8>) {
+fn output_sequence(numbers: &[u8]) {
     for n in numbers {
         println!("{}", n);
     }
