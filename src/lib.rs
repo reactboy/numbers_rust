@@ -8,11 +8,7 @@ pub fn print(limit: u8) {
 }
 
 fn generate_sequence(limit: u8) -> Vec<u8> {
-    let mut numbers: Vec<u8> = Vec::new();
-    for n in 1..=limit {
-        numbers.push(n);
-    }
-    numbers
+    (1..=limit).collect::<Vec<u8>>()
 }
 
 fn output_sequence(numbers: &[u8]) {
